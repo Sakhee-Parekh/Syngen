@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "material-icons/iconfont/material-icons.css";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
 
 const poppins = Poppins({
   variable: "--poppins",
@@ -28,7 +29,8 @@ export default function RootLayout({
           letterSpacing: "0.15em",
         }}
       >
-        {children}
+        <Navbar />
+        <div className="flex-grow overflow-hidden">{children}</div>
       </body>
     </html>
   );

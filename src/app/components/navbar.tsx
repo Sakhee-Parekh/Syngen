@@ -1,26 +1,43 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import github from "../images/github.svg";
-import instagram from "../images/instagram.svg";
+// import github from "../images/github.svg";
+// import instagram from "../images/instagram.svg";
 import linkedin from "../images/linkedin.svg";
 import portfolio from "../images/portfolio.svg";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1256) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div>
       {/* Floating Button */}
       <button
-        className="fixed top-8 right-8 z-50 flex justify-center items-center h-10 w-10 text-sm bg-[#F8EBE3]/80 text-black p-6 rounded-lg border-none shadow-xl backdrop-blur-sm hover:bg-[#1E1E1E] hover:text-white transition-all"
+        className="fixed top-8 right-8 z-50 flex justify-center items-center h-10 w-10 text-sm bg-[#edede9] text-black p-6 rounded-lg border-none shadow-xl backdrop-blur-sm hover:bg-[#ebf2fa] transition-all"
         onClick={toggleMenu}
         style={{
-          boxShadow: "0 0 10px rgba(181, 131, 141, 0.7)", // Glow effect
+          boxShadow: "0 0 10px rgba(129, 195, 215, 0.7)", // Glow effect
           animation: "pulse 9s infinite", // Pulsing effect
         }}
       >
@@ -29,8 +46,8 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed flex flex-col justify-between bg-[#F8EBE3] items-start top-5 left-5 h-[400px] rounded-2xl transition-all duration-300 ease-in-out transform ${
-          isOpen ? "translate-x-0" : "-translate-x-[110%]"
+        className={`fixed flex flex-col z-50 justify-between bg-white/90 sm:bg-white/60 items-start top-0 left-0 h-screen rounded-r-lg transition-all duration-300 ease-in-out transform ${
+          isOpen ? "translate-x-0" : "-translate-x-[100%]"
         } w-[250px] p-8`}
       >
         <div>
@@ -43,45 +60,45 @@ export default function Navbar() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#E5989B] transition uppercase"
+                  className="hover:text-[#81c3d7] transition uppercase"
                 >
                   About
                 </a>
               </li>
               <li>
                 <a
-                  href="#experience"
-                  className="hover:text-[#E5989B] transition uppercase"
+                  href="#projects"
+                  className="hover:text-[#81c3d7] transition uppercase"
                 >
-                  Experience
+                  Clients
                 </a>
               </li>
               <li>
                 <a
-                  href="#projects"
-                  className="hover:text-[#E5989B] transition uppercase"
+                  href="#research"
+                  className="hover:text-[#81c3d7] transition uppercase"
                 >
-                  Projects
+                  Research
                 </a>
               </li>
             </ul>
           </nav>
         </div>
         <div className="flex space-x-4">
-          <a
+          {/* <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image src={instagram} alt="github" width={40} height={40} />
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="https://www.github.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image src={github} alt="github" width={40} height={40} />
-          </a>
+          </a> */}
           <a
             href="https://www.linkedin.com"
             target="_blank"

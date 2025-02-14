@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Navbar from "./components/navbar";
+import Image from "next/image";
+import underline from "./images/underline.png";
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -14,36 +15,74 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      className="relative w-full min-h-screen flex flex-col items-center py-10 px-3 overflow-hidden"
+    <main
       style={{
-        background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(154, 113, 151, 0.5) 10px, transparent 300px)`,
+        background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(173, 216, 230, 0.5) 0%, rgba(173, 216, 230, 0) 20%)`,
       }}
     >
-      <Navbar />
-      <main className="flex w-full h-[90vh] justify-center items-center overflow-auto">
-        <div className="flex flex-col gap-8 w-[50%]">
-          <h1 className="text-white text-center text-5xl font-semibold">
+      <div className="flex flex-col w-full h-[100vh] items-center justify-around py-10">
+        <div className="flex flex-col gap-2 w-full pt-20 xs:w-[80%] md:w-[60%] px-3">
+          <p className="text-black/70 text-sm sm:text-xl font-medium">
+            Your trusted partner for Design, Web & AI solutions.
+          </p>
+
+          <h1 className="text-black text-5xl md:text-6xl lg:text-8xl font-bold">
             Syngen Solutions
           </h1>
-          <p
-            className="text-white text-center text-base"
-            style={{
-              letterSpacing: "0em",
-            }}
-          >
-            Syngen Solutions is a versatile consulting service specializing in
-            creating tailored websites and seamless AI integrations. Syngen
-            Solutions crafts intuitive, user-centered web solutions.
-            Additionally, Syngen Solutions offers expert frontend development
-            services, working with clients like a Spain-based property
-            management company. Whether it’s delivering innovative AI-driven
-            functionalities or ensuring smooth, accessible designs, Syngen
-            Solutions balances both user experience and functionality to create
-            impactful, scalable results for every project.
-          </p>
         </div>
-      </main>
-    </div>
+        <div className="w-full z-0">
+          <Image src={underline} alt="" className="w-full" />
+        </div>
+      </div>
+      <div className="flex flex-col w-full h-full px-10 pt-96 pb-40 justify-center items-center gap-y-10">
+        <h1
+          id="projects"
+          className="text-black text-4xl md:text-6xl lg:text-8xl font-semibold"
+        >
+          About
+        </h1>
+        <div className="flex flex-wrap gap-10 w-full justify-center 1256:justify-end 1256:left-40">
+          <div className="bg-[#fffcf2]/80 h-[500px] rounded-lg w-[100%] 1256:w-[39%]">
+            body
+          </div>
+          <div className="bg-[#fffcf2]/80 rounded-lg h-[500px] w-[100%] 1256:w-[39%]">
+            body
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full h-full px-10 pb-40 justify-center items-center gap-y-10">
+        <h1
+          id="projects"
+          className="text-black text-4xl md:text-6xl lg:text-8xl font-semibold"
+        >
+          Clients
+        </h1>
+        <div className="flex flex-wrap gap-10 w-full justify-center 1256:justify-end 1256:left-40">
+          <div className="bg-[#fffcf2]/80 h-[500px] rounded-lg w-[100%] 1256:w-[25%]">
+            body
+          </div>
+          <div className="bg-[#fffcf2]/80 rounded-lg h-[500px] w-[100%] 1256:w-[25%]">
+            body
+          </div>
+          <div className="bg-[#fffcf2]/80 rounded-lg h-[500px] w-[100%] 1256:w-[25%]">
+            body
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-full h-full px-10 pb-40 justify-center items-center gap-y-10">
+        <h1
+          id="projects"
+          className="text-black text-4xl md:text-6xl lg:text-8xl font-semibold"
+        >
+          Research
+        </h1>
+        <div className="flex flex-wrap gap-10 w-full justify-center 1256:justify-end 1256:left-40">
+          <div className="bg-[#fffcf2]/80 h-[500px] rounded-lg w-[100%] 1256:w-[80%]">
+            body
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
