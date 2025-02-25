@@ -26,7 +26,6 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased tracking-wide`}
         style={{
           fontFamily: "var(--poppins), sans-serif",
-          letterSpacing: "0.15em",
         }}
       >
         <Navbar />

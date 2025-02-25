@@ -1,120 +1,57 @@
 "use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-// import github from "../images/github.svg";
-// import instagram from "../images/instagram.svg";
-import linkedin from "../images/linkedin.svg";
-import portfolio from "../images/portfolio.svg";
+
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 1256) {
-        setIsOpen(false);
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
       } else {
-        setIsOpen(true);
+        setIsScrolled(false);
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    handleResize();
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div>
-      {/* Floating Button */}
-      <button
-        className="fixed top-8 right-8 z-50 flex justify-center items-center h-10 w-10 text-sm bg-[#edede9] text-black p-6 rounded-lg border-none shadow-xl backdrop-blur-sm hover:bg-[#ebf2fa] transition-all"
-        onClick={toggleMenu}
-        style={{
-          boxShadow: "0 0 10px rgba(129, 195, 215, 0.7)", // Glow effect
-          animation: "pulse 9s infinite", // Pulsing effect
-        }}
-      >
-        <span className="material-icons">menu</span>
-      </button>
-
-      {/* Sidebar */}
-      <div
-        className={`fixed flex flex-col z-50 justify-between bg-white/90 sm:bg-white/60 items-start top-0 left-0 h-screen rounded-r-lg transition-all duration-300 ease-in-out transform ${
-          isOpen ? "translate-x-0" : "-translate-x-[100%]"
-        } w-[250px] p-8`}
-      >
-        <div>
-          <button className="text-black text-xl" onClick={toggleMenu}>
-            <span className="material-icons">close</span>
-          </button>
-
-          <nav className="text-black pt-5 text-2xl">
-            <ul className="space-y-5">
-              <li>
-                <a
-                  href="#about"
-                  className="hover:text-[#81c3d7] transition uppercase"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="hover:text-[#81c3d7] transition uppercase"
-                >
-                  Clients
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#research"
-                  className="hover:text-[#81c3d7] transition uppercase"
-                >
-                  Research
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="flex space-x-4">
-          {/* <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={instagram} alt="github" width={40} height={40} />
-          </a> */}
-          {/* <a
-            href="https://www.github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={github} alt="github" width={40} height={40} />
-          </a> */}
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={linkedin} alt="github" width={40} height={40} />
-          </a>
-          <a
-            href="https://www.artportfolio.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={portfolio} alt="github" width={40} height={40} />
-          </a>
+    <nav
+      className={`fixed top-0 left-0 w-full ${
+        isScrolled ? "bg-[#f5f5f5]/90" : "bg-[#f5f5f5]/10 transition"
+      } shadow-md z-50`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="text-2xl font-bold text-black">Syngen</div>
+        <div className="flex gap-x-8 items-center">
+          <ul className="flex space-x-8 text-black text-lg">
+            <li>
+              <a href="#services" className="hover:text-black/60 transition">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#clients" className="hover:text-black/60 transition">
+                Clients
+              </a>
+            </li>
+          </ul>
+          <div className="flex space-x-4">
+            <a
+              href="mailto:email@example.com"
+              className="bg-black text-white px-4 py-2 rounded-full hover:bg-black/60 transition"
+            >
+              Contact
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
