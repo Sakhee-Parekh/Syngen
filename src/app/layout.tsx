@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "material-icons/iconfont/material-icons.css";
-import { Poppins } from "next/font/google";
+import { Poppins, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
@@ -8,6 +8,12 @@ const poppins = Poppins({
   variable: "--poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+const dmserifdisplay = DM_Serif_Display({
+  variable: "--playwrite",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -23,9 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} antialiased tracking-wide`}
+        className={`${poppins.variable} ${dmserifdisplay.variable} antialiased tracking-wide`}
         style={{
-          fontFamily: "var(--poppins), sans-serif",
+          fontFamily: "var(--poppins), var(--dmserifdisplay), sans-serif",
         }}
       >
         <Navbar />

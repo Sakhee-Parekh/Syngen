@@ -23,17 +23,17 @@ export default function FeaturedWorks() {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className="w-full h-full py-20">
+    <section className="w-full h-full">
       <style jsx global>{`
         .swiper-pagination-bullet-active {
-          background-color: black !important;
+          background-color: #433e3f !important;
         }
         .swiper-container {
           height: 100% !important;
         }
 
         .swiper-wrapper {
-          height: 480px !important;
+          height: 450px !important;
         }
 
         .swiper-slide {
@@ -72,7 +72,7 @@ export default function FeaturedWorks() {
         spaceBetween={20}
       >
         <SwiperSlide>
-          <div className="w-full relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="w-full relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={ai}
               alt="ai triangle ventures"
@@ -82,7 +82,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">AI Triangle Ventures</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Webpage created for early stage fund investing in the new era of
                 enterprise AI startups.
               </p>
@@ -90,7 +90,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={adobe}
               alt="adobe"
@@ -100,7 +100,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Adobe</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Performed User Research & Feature Analysis. Focused on
                 evaluating features, providing recommendations, and developing
                 UX designs for Adobe&apos;s leading illustration and drawing
@@ -111,7 +111,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative h-full bg-white rounded-lg shadow-lg text-black">
+          <div className="relative h-full bg-white/60 rounded-lg shadow-lg text-black">
             <Image
               src={green}
               alt="green ninja"
@@ -121,7 +121,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Green Ninja</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Developed AI-driven tools for education, such as a Teacher
                 Assessment Creator and personalized Teaching Assistant.
                 Optimized GPT-3.5 for project-based learning and contributed to
@@ -131,7 +131,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative h-full bg-white rounded-lg shadow-lg text-black">
+          <div className="relative h-full bg-white/60 rounded-lg shadow-lg text-black">
             <Image
               src={sjsu}
               alt="sjsu"
@@ -141,17 +141,18 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">SJSU</h3>
-              <p className="mt-2">
-                Developed AI-driven tools for education, such as a Teacher
-                Assessment Creator and personalized Teaching Assistant.
-                Optimized GPT-3.5 for project-based learning and contributed to
-                grant proposals, while designing intuitive UI/UX solutions.
+              <p className="mt-2 text-sm">
+                Key contributions to a $10 million EIR grant proposal to the
+                Department of Education for{" "}
+                <i>Science Roots: Growing Student Futures</i>—a project
+                leveraging GenAI-enhanced, project-based learning in
+                collaboration with Green Ninja.{" "}
               </p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={proppex}
               alt="proppex"
@@ -161,7 +162,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Proppex</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 A real estate tech start-up that builds a seamless property
                 management platform. Contributed by developing responsive
                 prototypes, building ReactJS components, and creating efficient
@@ -171,7 +172,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={jora}
               alt="jora"
@@ -181,7 +182,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Jora</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Platform that streamlines live event management, offering tools
                 for networking, booking, and data insights. Designed and
                 developed the website and web app’s UI/UX.
@@ -190,7 +191,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={ucr}
               alt="ucr"
@@ -202,7 +203,7 @@ export default function FeaturedWorks() {
               <h3 className="text-xl font-bold">
                 University of California, Riverside
               </h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Website to advocate for and assist students stuck in leases
                 while in the COVID-19 pandemic.
               </p>
@@ -210,7 +211,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={bay}
               alt="bay valley"
@@ -220,7 +221,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Bay Valley Pediatrics</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Extensive website for a local doctors office, wanting to improve
                 their online presence to attract new customers.
               </p>
@@ -228,7 +229,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={execute}
               alt="execute pm"
@@ -238,7 +239,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Execute PM</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Logo created for Execute PM; A start-up based in Australia
                 focused on consulting services.
               </p>
@@ -246,7 +247,7 @@ export default function FeaturedWorks() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
+          <div className="relative bg-white/60 h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
               src={jess}
               alt="hairbyjess"
@@ -256,7 +257,7 @@ export default function FeaturedWorks() {
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Hair by Jess</h3>
-              <p className="mt-2">
+              <p className="mt-2 text-sm">
                 Simple static website created for small business wanting to
                 bring their presence online.
               </p>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,28 +30,45 @@ export default function Navbar() {
       } shadow-md z-50`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-black">Syngen</div>
-        <div className="flex gap-x-8 items-center">
-          <ul className="flex space-x-8 text-black text-lg">
+        <div className="font-dmserifdisplay text-2xl font-bold text-black">
+          Syngen
+        </div>
+        <button
+          className="lg:hidden text-black"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+        <div
+          className={`absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none transition-all duration-300 ${
+            isOpen ? "block" : "hidden lg:flex"
+          }`}
+        >
+          <ul className="flex flex-col lg:flex-row lg:space-x-8 text-black text-lg items-center lg:items-center p-6 lg:p-0">
             <li>
-              <a href="#services" className="hover:text-black/60 transition">
+              <a href="#services" className="hover:text-[#433e3f] transition">
                 Services
               </a>
             </li>
             <li>
-              <a href="#clients" className="hover:text-black/60 transition">
+              <a href="#clients" className="hover:text-[#433e3f] transition">
                 Clients
               </a>
             </li>
+            <li>
+              <a href="#blogs" className="hover:text-[#433e3f] transition">
+                Research
+              </a>
+            </li>
+            <li className="mt-4 lg:mt-0">
+              <a
+                href="mailto:email@example.com"
+                className="bg-black hover:bg-[#433e3f] text-white px-4 py-2 rounded-full hover:text-white transition"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
-          <div className="flex space-x-4">
-            <a
-              href="mailto:email@example.com"
-              className="bg-black text-white px-4 py-2 rounded-full hover:bg-black/60 transition"
-            >
-              Contact
-            </a>
-          </div>
         </div>
       </div>
     </nav>
