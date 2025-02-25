@@ -8,6 +8,16 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import PrevButton from "./prevbutton";
 import NextButton from "./nextbutton";
+import ai from "../images/aitriangle.png";
+import adobe from "../images/adobe.jpeg";
+import green from "../images/greenninja.png";
+import sjsu from "../images/sjsu.png";
+import proppex from "../images/proppex.png";
+import jora from "../images/jora.png";
+import ucr from "../images/ucr.avif";
+import bay from "../images/bayvalley.png";
+import execute from "../images/execute.jpg";
+import jess from "../images/jess.png";
 
 export default function FeaturedWorks() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -64,11 +74,11 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="w-full relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={ai}
+              alt="ai triangle ventures"
               width={500}
               height={300}
-              className="object-cover w-full h-48"
+              className="object-contain w-full h-48"
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">AI Triangle Ventures</h3>
@@ -82,8 +92,8 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={adobe}
+              alt="adobe"
               width={500}
               height={300}
               className="object-cover w-full h-48"
@@ -103,11 +113,11 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative h-full bg-white rounded-lg shadow-lg text-black">
             <Image
-              src="/path/to/your-image.jpg"
-              alt="Featured Work 1"
+              src={green}
+              alt="green ninja"
               width={500}
               height={300}
-              className="object-cover w-full h-48"
+              className="object-contain w-full h-48"
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Green Ninja</h3>
@@ -123,11 +133,11 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative h-full bg-white rounded-lg shadow-lg text-black">
             <Image
-              src="/path/to/your-image.jpg"
-              alt="Featured Work 1"
+              src={sjsu}
+              alt="sjsu"
               width={500}
               height={300}
-              className="object-cover w-full h-48"
+              className="object-contain w-full h-48"
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">SJSU</h3>
@@ -143,11 +153,11 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={proppex}
+              alt="proppex"
               width={500}
               height={300}
-              className="object-cover w-full h-48"
+              className="object-fill w-full h-48"
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Proppex</h3>
@@ -163,8 +173,8 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={jora}
+              alt="jora"
               width={500}
               height={300}
               className="object-cover w-full h-48"
@@ -182,11 +192,11 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={ucr}
+              alt="ucr"
               width={500}
               height={300}
-              className="object-cover w-full h-48"
+              className="object-cover object-[35%_45%] w-full h-48"
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">
@@ -202,11 +212,11 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={bay}
+              alt="bay valley"
               width={500}
               height={300}
-              className="object-cover w-full h-48"
+              className="object-cover object-top w-full h-48"
             />
             <div className="p-6 flex-1">
               <h3 className="text-xl font-bold">Bay Valley Pediatrics</h3>
@@ -220,8 +230,8 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={execute}
+              alt="execute pm"
               width={500}
               height={300}
               className="object-cover w-full h-48"
@@ -238,8 +248,8 @@ export default function FeaturedWorks() {
         <SwiperSlide>
           <div className="relative bg-white h-full rounded-lg overflow-hidden shadow-lg text-black">
             <Image
-              src="/path/to/your-image2.jpg"
-              alt="Featured Work 2"
+              src={jess}
+              alt="hairbyjess"
               width={500}
               height={300}
               className="object-cover w-full h-48"
