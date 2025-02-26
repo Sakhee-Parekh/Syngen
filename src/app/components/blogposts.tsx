@@ -4,7 +4,7 @@ import ai from "../images/aiimg.jpg";
 const blogPosts = [
   {
     title: "Generative AI in Digital Art: Evaluating Leading Models",
-    date: "Sep 2022 - Jan 2023",
+    date: "Jan 2023",
     description:
       "Extensive research on Generative AI models: NightCafe, DALL-E 2, Starry AI, and Stable Diffusion. Evaluated on Ease of Use, Accuracy, Time, and Reproducibility.",
     link: "https://productplus.net/sakhee/SakheeHP-GenerativeAI-Art-Whitepaper.pdf",

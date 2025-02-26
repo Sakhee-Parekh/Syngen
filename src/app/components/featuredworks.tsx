@@ -22,19 +22,25 @@ export default function FeaturedWorks() {
           focus: false,
           perPage: 7,
           perMove: 1,
-          gap: "1.5rem",
+          gap: "0.5rem",
           height: "160px",
           autoScroll: {
             speed: 0.3,
             pauseOnInteraction: true,
             pauseOnHover: true,
           },
-          drag: "free",
           arrows: false,
           pagination: false,
           rewind: false,
           waitForTransition: true,
           easing: "linear",
+          breakpoints: {
+            1280: { perPage: 5 },
+            1024: { perPage: 4 },
+            768: { perPage: 3 },
+            640: { perPage: 2 },
+            480: { perPage: 1 },
+          },
         }}
         extensions={{ AutoScroll }}
       >
@@ -44,6 +50,8 @@ export default function FeaturedWorks() {
             alt: "AI Triangle Ventures",
             name: "AI Triangle Ventures",
           },
+          { src: sjsu, alt: "SJSU", name: "SJSU" },
+          { src: proppex, alt: "Proppex", name: "Proppex" },
           { src: adobe, alt: "Adobe", name: "Adobe" },
           { src: jora, alt: "Jora", name: "Jora" },
           { src: green, alt: "Green Ninja", name: "Green Ninja" },
@@ -52,16 +60,14 @@ export default function FeaturedWorks() {
             alt: "University of California, Riverside",
             name: "University of California, Riverside",
           },
-          { src: execute, alt: "Execute PM", name: "Execute PM" },
         ].map((logo, index) => (
           <SplideSlide key={index}>
             <div className="relative group h-full rounded-lg overflow-hidden text-black flex items-center justify-center">
               <Image
                 src={logo.src}
                 alt={logo.alt}
-                width={100}
                 height={100}
-                className="object-contain w-[100px] h-[100px] transition-all duration-300 rounded-lg"
+                className="object-contain w-auto h-[100px] transition-all duration-300 rounded-lg"
               />
               <div className="absolute top-0 left-0 w-full h-full flex items-center rounded-lg justify-center bg-black/60 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <h3 className="text-xs font-semibold text-center px-2">
@@ -72,8 +78,6 @@ export default function FeaturedWorks() {
           </SplideSlide>
         ))}
         {[
-          { src: sjsu, alt: "SJSU", name: "SJSU" },
-          { src: proppex, alt: "Proppex", name: "Proppex" },
           {
             src: bay,
             alt: "Bay Valley Pediatrics",
@@ -102,6 +106,25 @@ export default function FeaturedWorks() {
             </div>
           </SplideSlide>
         ))}
+        {[{ src: execute, alt: "Execute PM", name: "Execute PM" }].map(
+          (logo, index) => (
+            <SplideSlide key={index}>
+              <div className="relative group h-full rounded-lg overflow-hidden text-black flex items-center justify-center">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  height={100}
+                  className="object-contain w-auto h-[100px] transition-all duration-300 rounded-lg"
+                />
+                <div className="absolute top-0 left-0 w-full h-full flex items-center rounded-lg justify-center bg-black/60 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <h3 className="text-xs font-semibold text-center px-2">
+                    {logo.name}
+                  </h3>
+                </div>
+              </div>
+            </SplideSlide>
+          )
+        )}
       </Splide>
     </section>
   );

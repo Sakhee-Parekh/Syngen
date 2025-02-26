@@ -7,14 +7,14 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 export default function Offices() {
   const officeLocations = [
     {
-      name: "Mumbai, India",
-      coords: [19.076, 72.8777] as [number, number],
-      address: "Mumbai, India",
-    },
-    {
       name: "Fremont, CA",
       coords: [37.5483, -121.9886] as [number, number],
       address: "Fremont, CA",
+    },
+    {
+      name: "Mumbai, India",
+      coords: [19.076, 72.8777] as [number, number],
+      address: "Mumbai, India",
     },
     {
       name: "Riderside, CA",
@@ -61,9 +61,8 @@ export default function Offices() {
 
       <div className="w-full md:w-[50%] flex flex-col items-center gap-4">
         <h1 className="font-dmserifdisplay text-black text-4xl md:text-6xl font-semibold mb-10">
-          Our Offices
+          Locations
         </h1>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {officeLocations.map((office, index) => (
             <div

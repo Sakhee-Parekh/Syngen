@@ -70,7 +70,10 @@ export default function TechStack() {
       <h1 className="font-dmserifdisplay text-black text-4xl md:text-6xl font-semibold mb-10">
         Tech Stack & Tools
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl px-10">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl px-10 
+  max-h-[500px] sm:max-h-none overflow-y-auto sm:overflow-visible"
+      >
         {techStack.map((tech, index) => (
           <div
             key={index}
