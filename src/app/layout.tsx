@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "material-icons/iconfont/material-icons.css";
-import { Poppins, DM_Serif_Display } from "next/font/google";
+import { Poppins, DM_Serif_Display, Fascinate } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
@@ -12,6 +12,12 @@ const poppins = Poppins({
 
 const dmserifdisplay = DM_Serif_Display({
   variable: "--playwrite",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const fascinate = Fascinate({
+  variable: "--fascinate",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -29,9 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${dmserifdisplay.variable} antialiased tracking-wide`}
+        className={`${poppins.variable} ${dmserifdisplay.variable} ${fascinate.variable} antialiased tracking-wide`}
         style={{
-          fontFamily: "var(--poppins), var(--dmserifdisplay), sans-serif",
+          fontFamily:
+            "var(--poppins), var(--dmserifdisplay), var(--fascinate), sans-serif",
         }}
       >
         <Navbar />

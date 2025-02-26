@@ -18,6 +18,10 @@ body {
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -43,6 +47,11 @@ body::before {
   }
   .font-dmserifdisplay {
     font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .fascinate-regular {
+    font-family: "Fascinate", serif;
     font-weight: 400;
     font-style: normal;
   }

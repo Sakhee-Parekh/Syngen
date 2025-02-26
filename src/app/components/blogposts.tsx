@@ -15,7 +15,7 @@ const blogPosts = [
 export default function BlogPosts() {
   return (
     <section className="flex flex-col items-center w-full">
-      <div className="grid grid-cols-1 gap-6 max-w-7xl px-6">
+      <div className="z-20 grid grid-cols-1 gap-6 max-w-7xl px-6">
         {blogPosts.map((post, index) => (
           <div
             key={index}

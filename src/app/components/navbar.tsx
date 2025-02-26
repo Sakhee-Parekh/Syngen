@@ -51,18 +51,18 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#clients" className="hover:text-[#433e3f] transition">
-                Clients
+              <a href="#customers" className="hover:text-[#433e3f] transition">
+                Customers
               </a>
             </li>
             <li>
-              <a href="#blogs" className="hover:text-[#433e3f] transition">
+              <a href="#research" className="hover:text-[#433e3f] transition">
                 Research
               </a>
             </li>
             <li className="mt-4 lg:mt-0">
               <a
-                href="mailto:email@example.com"
+                href="mailto:sakhee@syngensolutions.com"
                 className="bg-black hover:bg-[#433e3f] text-white px-4 py-2 rounded-full hover:text-white transition"
               >
                 Contact
