@@ -129,7 +129,7 @@ export default function Home() {
           Testimonials
         </h1>
         <div className="flex flex-wrap justify-center gap-10 w-full max-w-7xl">
-          <div className="z-20 bg-neutral-200 p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/4 text-center flex flex-col h-full">
+          <div className="hover:scale-105 transform transition-all duration-300 z-20 bg-neutral-200 p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/4 text-center flex flex-col h-full">
             <div className="flex-grow">
               <p className="text-gray-700 text-sm italic">
                 &quot;Syngen&apos;s expertise in AI integration has been
@@ -143,7 +143,7 @@ export default function Home() {
               <p className="text-gray-500">Founder, Green Ninja</p>
             </div>
           </div>
-          <div className="z-20 bg-neutral-200 p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/4 text-center flex flex-col h-full">
+          <div className="hover:scale-105 transform transition-all duration-300 z-20 bg-neutral-200 p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/4 text-center flex flex-col h-full">
             <div className="flex-grow">
               <p className="text-gray-700 text-sm italic">
                 &quot;Syngen designed a beautiful, user-friendly website for our
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center mb-6 z-20">
             <a
-              href="mailto:sakhee@syngensolutions.com"
+              href="mailto:syngensolutions09@gmail.com"
               className="bg-black hover:bg-[#433e3f] text-white px-4 py-2 rounded-full hover:text-white transition"
             >
               Contact Us

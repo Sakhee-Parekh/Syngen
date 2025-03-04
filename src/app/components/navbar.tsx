@@ -62,7 +62,7 @@ export default function Navbar() {
             </li>
             <li className="mt-4 lg:mt-0">
               <a
-                href="mailto:sakhee@syngensolutions.com"
+                href="syngensolutions09@gmail.com"
                 className="bg-black hover:bg-[#433e3f] text-white px-4 py-2 rounded-full hover:text-white transition"
               >
                 Contact
