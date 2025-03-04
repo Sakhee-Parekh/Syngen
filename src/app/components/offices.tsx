@@ -12,9 +12,9 @@ export default function Offices() {
       address: "Fremont, CA",
     },
     {
-      name: "Mumbai, India",
-      coords: [19.076, 72.8777] as [number, number],
-      address: "Mumbai, India",
+      name: "Houston, Texas",
+      coords: [29.7604, -95.3698] as [number, number],
+      address: "Houston, Texas",
     },
     {
       name: "Riderside, CA",

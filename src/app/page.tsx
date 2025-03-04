@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Laptop, Code, Palette, Share2 } from "lucide-react";
 import underline from "./images/underline.png";
 import FeaturedWorks from "./components/featuredworks";
-import BlogPosts from "./components/blogposts";
+// import BlogPosts from "./components/blogposts";
 import dynamic from "next/dynamic";
 
 export default function Home() {
@@ -38,7 +38,8 @@ export default function Home() {
       <div className="flex flex-col w-full h-[100vh] items-center justify-around py-10">
         <div className="flex flex-col gap-2 w-full pt-20 xs:w-[80%] md:w-[60%] px-3">
           <p className="z-20 text-[#433e3f] text-sm sm:text-xl font-medium">
-            Your trusted partner for Branding, Design, Web & AI solutions.
+            Your trusted partner for Web, Product, AI, Branding & Design
+            solutions.
           </p>
 
           <h1 className="z-20 font-dmserifdisplay text-black text-5xl md:text-6xl lg:text-8xl font-bold">
@@ -60,21 +61,24 @@ export default function Home() {
               AI Development & Integration
             </h2>
             <p className="mt-4 text-gray-700 text-sm">
-              Implementing AI solutions to optimize business processes.
+              Implementing AI solutions to build products and optimize business
+              processes.
             </p>
           </div>
           <div className="z-20 bg-neutral-200 p-6 rounded-lg shadow-lg text-center hover:scale-105 transform transition-all duration-300">
             <Code className="mx-auto text-4xl text-black mb-4" />
             <h2 className="text-xl font-bold text-black">Web Development</h2>
             <p className="mt-4 text-gray-700 text-sm">
-              Designing and developing modern, high-performance websites.
+              Designing and developing modern responsive, high-performance
+              applications and websites.
             </p>
           </div>
           <div className="z-20 bg-neutral-200 p-6 rounded-lg shadow-lg text-center hover:scale-105 transform transition-all duration-300">
             <Palette className="mx-auto text-4xl text-black mb-4" />
             <h2 className="text-xl font-bold text-black">Brand Development</h2>
             <p className="mt-4 text-gray-700 text-sm">
-              Crafting unique brand identities to stand out in the market.
+              Jumpstarting brands by crafting unique brand identities to stand
+              out in the market.
             </p>
           </div>
           <div className="z-20 bg-neutral-200 p-6 rounded-lg shadow-lg text-center hover:scale-105 transform transition-all duration-300">
@@ -104,7 +108,8 @@ export default function Home() {
       >
         <TechStack />
       </section> */}
-      <section
+
+      {/* <section
         id="research"
         className="flex flex-col md:flex-row w-full h-full px-10 py-20 justify-center items-center gap-10 mt-0"
       >
@@ -120,7 +125,8 @@ export default function Home() {
             much more.
           </p>
         </div>
-      </section>
+      </section> */}
+
       <section
         id="testimonials"
         className="flex flex-col w-full h-full px-10 py-20 bg-white/90 justify-center items-center gap-y-10 mt-0"
@@ -139,23 +145,24 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-4">
-              <p className="font-semibold text-black">Dr. Eugene Cordero</p>
-              <p className="text-gray-500">Founder, Green Ninja</p>
+              <p className="font-semibold text-black">PhD. Eugene Cordero</p>
+              <p className="text-gray-500">CEO, Green Ninja</p>
             </div>
           </div>
           <div className="hover:scale-105 transform transition-all duration-300 z-20 bg-neutral-200 p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/4 text-center flex flex-col h-full">
             <div className="flex-grow">
               <p className="text-gray-700 text-sm italic">
-                &quot;Syngen designed a beautiful, user-friendly website for our
-                pediatric clinic. Their attention to detail and understanding of
-                patient needs made a huge difference in our online presence. Our
-                patients now find it easier to access information and connect
-                with us. Truly a game-changer!&quot;
+                &quot;Syngen Solutions designed and developed a beautiful,
+                user-friendly website and product for us. Their attention to
+                detail and understanding of our needs made a significant impact
+                on our online presence. The platform is now more accessible, and
+                our users find it easier to navigate and interact with our
+                services. A true game-changer!&quot;
               </p>
             </div>
             <div className="mt-4">
-              <p className="font-semibold text-black">Dr. Sachdeva</p>
-              <p className="text-gray-500">Founder, Bay Valley Pediatrics</p>
+              <p className="font-semibold text-black">Jora</p>
+              <p className="text-gray-500">Founder, Om C</p>
             </div>
           </div>
         </div>
@@ -176,7 +183,8 @@ export default function Home() {
               Syngen Solutions
             </h2>
             <p className="text-sm text-gray-700 z-20">
-              Your trusted partner for Design, Web & AI solutions.
+              Your trusted partner for Web, Product, AI, Branding & Design
+              solutions.
             </p>
           </div>
           <div className="flex justify-center mb-6 z-20">
