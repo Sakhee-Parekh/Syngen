@@ -7,9 +7,9 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 export default function Offices() {
   const officeLocations = [
     {
-      name: "Fremont, CA",
-      coords: [37.5483, -121.9886] as [number, number],
-      address: "Fremont, CA",
+      name: "Riderside, CA",
+      coords: [34.0522, -118.2437] as [number, number],
+      address: "Riderside, CA",
     },
     {
       name: "Houston, Texas",
@@ -17,9 +17,9 @@ export default function Offices() {
       address: "Houston, Texas",
     },
     {
-      name: "Riderside, CA",
-      coords: [34.0522, -118.2437] as [number, number],
-      address: "Riderside, CA",
+      name: "Fremont, CA",
+      coords: [37.5483, -121.9886] as [number, number],
+      address: "Fremont, CA",
     },
   ];
 
