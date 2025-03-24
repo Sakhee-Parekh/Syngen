@@ -166,7 +166,7 @@ export default function Products() {
             <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">
               {category.title}
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 text-center">
+            <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
               {category.useCases.map((useCase, i) => (
                 <li key={i}>{useCase}</li>
               ))}
