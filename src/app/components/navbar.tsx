@@ -55,11 +55,11 @@ export default function Navbar() {
                 Customers
               </a>
             </li>
-            {/* <li>
-              <a href="#research" className="hover:text-[#433e3f] transition">
-                Research
+            <li>
+              <a href="#products" className="hover:text-[#433e3f] transition">
+                Products and Use Cases
               </a>
-            </li> */}
+            </li>
             <li className="mt-4 lg:mt-0">
               <a
                 href="syngensolutions09@gmail.com"

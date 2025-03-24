@@ -6,6 +6,7 @@ import underline from "./images/underline.png";
 import FeaturedWorks from "./components/featuredworks";
 // import BlogPosts from "./components/blogposts";
 import dynamic from "next/dynamic";
+import Products from "./components/products";
 
 export default function Home() {
   const Map = useMemo(
@@ -102,12 +103,15 @@ export default function Home() {
         </h1>
         <FeaturedWorks />
       </section>
-      {/* <section
-        id="techstack"
-        className="flex flex-col w-full h-full px-10 py-20 bg-white/90 justify-center items-center gap-y-10 mt-0"
+      <section
+        id="products"
+        className="flex flex-col w-full h-full px-20 py-20 bg-white/90 justify-center items-center gap-y-10 mt-0"
       >
-        <TechStack />
-      </section> */}
+        <h1 className="z-20 font-dmserifdisplay text-black text-4xl md:text-6xl font-semibold mb-10">
+          Products and Use Cases
+        </h1>
+        <Products />
+      </section>
 
       {/* <section
         id="research"
