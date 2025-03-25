@@ -158,6 +158,7 @@ export default function Products() {
         "AI-assisted test creation with contextual input",
         "Automated question generation to reduce assessment time",
         "Seamless UI/UX for efficient test management",
+        "Automated question/content generation for industry-specific use cases (e.g., medical, legal) that can be customized for different industries",
       ],
       demoLink: "https://superlative-dusk-7e8a63.netlify.app/",
       icon: <Book className="text-black text-4xl" />,
