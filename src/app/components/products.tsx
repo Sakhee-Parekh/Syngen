@@ -1,6 +1,5 @@
 import {
   Video,
-  Phone,
   MessageCircle,
   Mic,
   Heart,
@@ -9,7 +8,7 @@ import {
   Users,
   FileText,
   BriefcaseMedical,
-  PhoneCall,
+  Book,
 } from "lucide-react";
 import React from "react";
 
@@ -122,27 +121,27 @@ export default function Products() {
       demoLink: "https://apps.nandiraju.com/amplehealthcare/",
       icon: <BriefcaseMedical className="text-black text-4xl" />,
     },
-    {
-      title: "iOS Apps",
-      useCases: [
-        "Create high-performance mobile applications for businesses",
-        "Integrate AI-powered features into iOS apps",
-        "Optimize user experience with custom mobile solutions",
-      ],
-      demoLink:
-        "https://apps.apple.com/us/developer/srikanth-nandiraju/id376481478?see-all=i-phonei-pad-apps",
-      icon: <Phone className="text-black text-4xl" />,
-    },
-    {
-      title: "Android Apps",
-      useCases: [
-        "Create high-performance mobile applications for businesses",
-        "Integrate AI-powered features into Android apps",
-        "Optimize user experience with custom mobile solutions",
-      ],
-      demoLink: "https://play.google.com/store/apps/dev?id=7339076932528012738",
-      icon: <PhoneCall className="text-black text-4xl" />,
-    },
+    // {
+    //   title: "iOS Apps",
+    //   useCases: [
+    //     "Create high-performance mobile applications for businesses",
+    //     "Integrate AI-powered features into iOS apps",
+    //     "Optimize user experience with custom mobile solutions",
+    //   ],
+    //   demoLink:
+    //     "https://apps.apple.com/us/developer/srikanth-nandiraju/id376481478?see-all=i-phonei-pad-apps",
+    //   icon: <Phone className="text-black text-4xl" />,
+    // },
+    // {
+    //   title: "Android Apps",
+    //   useCases: [
+    //     "Create high-performance mobile applications for businesses",
+    //     "Integrate AI-powered features into Android apps",
+    //     "Optimize user experience with custom mobile solutions",
+    //   ],
+    //   demoLink: "https://play.google.com/store/apps/dev?id=7339076932528012738",
+    //   icon: <PhoneCall className="text-black text-4xl" />,
+    // },
     {
       title: "Smart TV App",
       useCases: [
@@ -153,17 +152,27 @@ export default function Products() {
         "https://www.amazon.com/jaw-drop-Village-Digital-Mall/dp/B079DDCS48",
       icon: <Tv className="text-black text-4xl" />,
     },
+    {
+      title: "Teacher ConcepTest Creator",
+      useCases: [
+        "AI-assisted test creation with contextual input",
+        "Automated question generation to reduce assessment time",
+        "Seamless UI/UX for efficient test management",
+      ],
+      demoLink: "https://superlative-dusk-7e8a63.netlify.app/",
+      icon: <Book className="text-black text-4xl" />,
+    },
   ];
 
   return (
-    <div className="z-20 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="z-20 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {categories.map((category, index) => (
         <div
           key={index}
           className="flex flex-col justify-between items-center bg-neutral-100 p-6 rounded-lg shadow-lg space-y-6"
         >
           <div className="w-full">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
               {category.title}
             </h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 text-left">
@@ -178,8 +187,8 @@ export default function Products() {
             rel="noopener noreferrer"
             className="w-full"
           >
-            <div className="bg-neutral-200 p-5 rounded-lg shadow-lg text-center hover:scale-105 transform transition-all duration-300">
-              <div className="mx-auto text-4xl text-black mb-3 flex justify-center">
+            <div className="bg-neutral-200 p-6 rounded-lg shadow-lg text-center hover:scale-105 transform transition-all duration-300">
+              <div className="mx-auto text-4xl text-black mb-4 flex justify-center">
                 {category.icon}
               </div>
               <h3 className="text-lg font-bold text-black">View Demo</h3>

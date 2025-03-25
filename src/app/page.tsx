@@ -107,8 +107,12 @@ export default function Home() {
         id="products"
         className="flex flex-col w-full h-full px-20 py-20 bg-white/90 justify-center items-center gap-y-10 mt-0"
       >
-        <h1 className="z-20 font-dmserifdisplay text-black text-4xl md:text-6xl font-semibold mb-10">
+        <h1 className="flex text-center flex-col z-20 font-dmserifdisplay text-black text-4xl md:text-6xl font-semibold mb-10">
           Products and Use Cases
+          <span className="mt-4 text-gray-700 text-sm">
+            *Select products can also be developed as Android and iOS apps in
+            addition to Web.
+          </span>
         </h1>
         <Products />
       </section>
